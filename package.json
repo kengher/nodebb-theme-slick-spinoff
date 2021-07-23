@@ -1,14 +1,14 @@
 {
-  "name": "nodebb-theme-slick",
+  "name": "nodebb-theme-slick-spinoff",
   "version": "1.4.7",
   "nbbpm": {
     "compatibility": "^1.17.0"
   },
-  "description": "Slick theme for NodeBB",
+  "description": "Slick theme spinoff for NodeBB. Nothing major. Just shuffling items around.",
   "main": "theme.less",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pichalite/nodebb-theme-slick.git"
+    "url": "git+https://github.com/kengher/nodebb-theme-slick.git"
   },
   "keywords": [
     "nodebb",
@@ -17,16 +17,16 @@
     "themes"
   ],
   "author": {
-    "name": "pichalite",
-    "email": "pichalite.com@gmail.com"
+    "name": "kengher",
+    "email": "keng.her.84@gmail.com"
   },
   "bugs": {
-    "url": "https://github.com/pichalite/nodebb-theme-slick/issues"
+    "url": "https://github.com/kengher/nodebb-theme-slick/issues"
   },
   "maintainers": [
     {
-      "name": "pichalite",
-      "email": "pichalite.com@gmail.com"
+      "name": "kengher",
+      "email": "keng.her.84@gmail.com"
     }
   ]
 }
