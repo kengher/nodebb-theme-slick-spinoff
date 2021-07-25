@@ -1,5 +1,5 @@
 {
-	"id": "nodebb-theme-slick",
+	"id": "nodebb-theme-slick-spinoff",
 	"library": "./lib/theme.js",
 	"hooks": [
 		{
@@ -25,7 +25,10 @@
 		},
 		{
 			"hook": "filter:meta.getLinkTags", "method": "getLinkTags"
-		}
+		},
+		{
+	        "hook": "filter:widgets.getAreas", "method": "defineWidgetAreas"
+	    }
 	],
 	"scripts": [
 		"lib/slick.js",
