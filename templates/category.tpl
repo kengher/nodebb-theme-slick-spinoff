@@ -1,6 +1,13 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 <div class="row">
 	<div class="category col-lg-12 col-sm-12">
+
+		<h2 class="hidden-xs">{name}</h2>
+		<h4 class="hidden-xs">{description}</h4>
+		<!-- IF description -->
+		<br/>
+		<!-- ENDIF description -->
+
 		<!-- IMPORT partials/category/subcategory.tpl -->
 
 		<!-- IF children.length --><hr class="hidden-xs"/><!-- ENDIF children.length -->
@@ -18,22 +25,24 @@
 				<div class="alert alert-warning hide" id="new-topics-alert"></div>
 			</a>
 
-			<span class="pull-right" component="category/controls">
-				<!-- IMPORT partials/category/watch.tpl -->
-				<!-- IMPORT partials/category/sort.tpl -->
-				<!-- IMPORT partials/category/tools.tpl -->
-			</span>
+			<!-- IF privileges.topics:create -->
+				<span class="pull-right" component="category/controls">
+					<!-- IMPORT partials/category/watch.tpl -->
+					<!-- IMPORT partials/category/sort.tpl -->
+					<!-- IMPORT partials/category/tools.tpl -->
+				</span>
+			<!-- ENDIF privileges.topics:create -->
 		</div>
 
 		<hr class="hidden-xs" />
 
-		<h4 class="hidden-xs">{name}</h4>
-
-		<!-- IF !topics.length -->
-		<div class="alert alert-warning" id="category-no-topics">
-			[[category:no_topics]]
-		</div>
-		<!-- ENDIF !topics.length -->
+		<!-- IF privileges.topics:create -->
+			<!-- IF !topics.length -->
+			<div class="alert alert-warning" id="category-no-topics">
+				[[category:no_topics]]
+			</div>
+			<!-- ENDIF !topics.length -->
+		<!-- ENDIF privileges.topics:create -->
 
 		<!-- IMPORT partials/topics_list.tpl -->
 
